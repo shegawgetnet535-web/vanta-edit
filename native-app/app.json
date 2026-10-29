@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Vanta Edit",
+    "slug": "vanta-edit",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#09090b"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vantaedit.mobile",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Vanta Edit needs photo access so you can choose pictures to edit.",
+        "NSPhotoLibraryAddUsageDescription": "Vanta Edit saves your edited photos to your library."
+      }
+    },
+    "android": {
+      "package": "com.vantaedit.mobile",
+      "permissions": [
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Vanta Edit needs access to your photos so you can edit them.",
+          "cameraPermission": "Vanta Edit uses your camera when you choose to take a photo."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Vanta Edit accesses photos you choose to edit.",
+          "savePhotosPermission": "Vanta Edit saves edited photos to your library."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
